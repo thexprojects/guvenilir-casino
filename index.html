@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -19,51 +23,39 @@
         padding: 20px 16px 40px;
     }
 
-    /* LOGO */
-    .logo {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    .logo img {
-        width: 170px;
-    }
-
     /* BAŞLIK */
     .title {
         text-align: center;
         margin: 10px 0 10px;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: bold;
     }
 
-    /* DEKOR BAŞLIĞIN ALTINA ALINDI */
     .decor {
-        width: 80px;
+        width: 90px;
         height: 6px;
-        margin: 6px auto 20px;
+        margin: 6px auto 24px;
         background: linear-gradient(90deg,#5f2bff,#ff2bdc);
         border-radius: 10px;
     }
 
-    /* 2 KOLON GRID */
+    /* GRID */
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 14px;
+        gap: 16px;
     }
 
-    /* KART */
     .card {
         background: #140030;
         border: 1px solid #3e0b70;
-        border-radius: 14px;
-        padding: 14px 10px 18px;
+        border-radius: 16px;
+        padding: 16px 12px 20px;
         text-align: center;
         box-shadow:
             0 0 6px rgba(255, 0, 255, 0.18),
             0 0 12px rgba(110, 0, 255, 0.25);
-        transition: box-shadow .25s;
+        transition: .25s;
     }
 
     .card:hover {
@@ -72,37 +64,29 @@
             0 0 16px rgba(110, 0, 255, 0.45);
     }
 
-    /* LOGO KUTUSU - TÜM MARKALAR İÇİN ORTAK */
-   .logo-box {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 8px;              /* Kenarlara biraz nefes alanı */
-    box-sizing: border-box;
-}
+    .logo-box {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.logo-box img {
-    max-height: 90px;
-    width: 100%;                 /* Kartın genişliğini asla geçmesin */
-    max-width: 220px;            /* Büyük ekranlarda yine dolgun dursun */
-    height: auto;
-    filter: brightness(1.05);
-    object-fit: contain;
-}
-
+    .logo-box img {
+        max-height: 48px;
+        max-width: 160px;
+    }
 
     .bonus {
-        margin-top: 10px;
+        margin-top: 12px;
         font-size: 15px;
         font-weight: 600;
     }
 
     .btn {
         display: inline-block;
-        margin-top: 12px;
+        margin-top: 14px;
         background: #7900ff;
-        padding: 8px 14px;
+        padding: 9px 14px;
         border-radius: 7px;
         color: white;
         text-decoration: none;
@@ -112,14 +96,13 @@
 
     /* FOOTER */
     footer {
-        margin-top: 40px;
+        margin-top: 50px;
         padding: 20px 10px;
         text-align: center;
         color: #c4c4c4;
         font-size: 12px;
     }
 
-    /* META BADGE */
     .meta-badge {
         display: inline-flex;
         align-items: center;
@@ -145,18 +128,6 @@
         font-weight: bold;
     }
 
-    .meta-text {
-        font-size: 12px;
-        font-weight: 600;
-        color: #e5e5e5;
-        letter-spacing: .3px;
-    }
-
-    .copy {
-        font-size: 12px;
-        margin-top: 4px;
-        opacity: 0.85;
-    }
 </style>
 </head>
 
@@ -164,100 +135,94 @@
 
 <div class="container">
 
-    <!-- BAŞLIK -->
     <div class="title">Güvenilir Casino Siteleri</div>
-
-    <!-- DEKOR BAŞLIK ALTINA İNİŞ -->
     <div class="decor"></div>
 
-    <!-- GRID 8 ADET -->
     <div class="grid">
 
-      <!-- 1XBET -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/1xbet.png" alt="1xBet">
+        <!-- 1XBET -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/1xbet.png">
+            </div>
+            <div class="bonus">%100 HG Bonusu</div>
+            <a class="btn" href="http://cropped.link/kaydol_tg">Siteye Git</a>
         </div>
-        <div class="bonus">%100 HG Bonusu</div>
-        <a class="btn" href="http://cropped.link/kaydol_tg" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- CASINOMHUB -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/casinohub.png" alt="CasinomHub">
+        <!-- CASINOMHUB -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/casinohub.png" style="transform: scale(1.15);">
+            </div>
+            <div class="bonus">%375 HG Bonusu</div>
+            <a class="btn" href="https://www.casinomhub204.com/tr/?partner=p121007p121774pabeb#registration">Siteye Git</a>
         </div>
-        <div class="bonus">%375 HG Bonusu</div>
-        <a class="btn" href="https://www.casinomhub204.com/tr/?partner=p121007p121774pabeb#registration" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- LIGOBET -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/ligobet.png" alt="Ligobet">
+        <!-- LIGOBET -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/ligobet.png">
+            </div>
+            <div class="bonus">750₺ Deneme Bonusu</div>
+            <a class="btn" href="https://cutt.ly/QtelcFFs">Siteye Git</a>
         </div>
-        <div class="bonus">750₺ Deneme Bonusu/div>
-        <a class="btn" href="https://cutt.ly/QtelcFFs" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- MAXWIN -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/maxwin.png" alt="Maxwin">
+        <!-- MAXWIN -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/maxwin.png">
+            </div>
+            <div class="bonus">300₺ Deneme Bonusu</div>
+            <a class="btn" href="https://maxwin558.com/?btag=2347_2615">Siteye Git</a>
         </div>
-        <div class="bonus">300₺ Deneme Bonus</div>
-        <a class="btn" href="https://maxwin558.com/?btag=2347_2615" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- MOBILBAHIS -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/mobilbahis.png" alt="Mobilbahis">
+        <!-- MOBİLBAHİS -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/mobilbahis.png" style="transform: scale(1.18);">
+            </div>
+            <div class="bonus">100 Freespin</div>
+            <a class="btn" href="https://tinyurl.com/2kh8e3ab">Siteye Git</a>
         </div>
-        <div class="bonus">100 Freespin</div>
-        <a class="btn" href="https://tinyurl.com/2kh8e3ab" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- OTOBET -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/otobet.png" alt="Otobet">
+        <!-- OTOBET -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/otobet.png">
+            </div>
+            <div class="bonus">800₺ Deneme Bonusu</div>
+            <a class="btn" href="https://cutt.ly/Xtelei33">Siteye Git</a>
         </div>
-        <div class="bonus">800₺ Deneme Bonusu</div>
-        <a class="btn" href="https://cutt.ly/Xtelei33" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- ROKUBET -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/rokubet.png" alt="Rokubet">
+        <!-- ROKUBET -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/rokubet.png">
+            </div>
+            <div class="bonus">335 Freespin</div>
+            <a class="btn" href="https://www.rokubetvh.com/tr/sign-up?partner=p50000p51880p0276&source=resmi4">Siteye Git</a>
         </div>
-        <div class="bonus">335 Freespin</div>
-        <a class="btn" href="https://www.rokubetvh.com/tr/sign-up?partner=p50000p51880p0276&source=resmi4" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
-      <!-- TIPOBET -->
-      <div class="card">
-        <div class="logo-box">
-          <img src="logos/tipobet.png" alt="Tipobet">
+        <!-- TIPOBET -->
+        <div class="card">
+            <div class="logo-box">
+                <img src="logos/tipobet.png">
+            </div>
+            <div class="bonus">750₺ Deneme Bonusu</div>
+            <a class="btn" href="https://tipobet5961.com/Register-3748">Siteye Git</a>
         </div>
-        <div class="bonus">750₺ Deneme Bonusu</div>
-        <a class="btn" href="https://tipobet5961.com/Register-3748" target="_blank" rel="nofollow noopener">Siteye Git</a>
-      </div>
 
     </div>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
-
     <div class="meta-badge">
         <div class="meta-icon">∞</div>
-        <div class="meta-text">Meta Business Partner</div>
+        Meta Business Partner
     </div>
 
-    <div class="copy">© 2025 guvenilir.casino</div>
+    © 2025 guvenilir.casino
 </footer>
 
 </body>
